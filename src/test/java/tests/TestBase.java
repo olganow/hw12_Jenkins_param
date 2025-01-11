@@ -21,8 +21,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.timeout = 10000;
         Configuration.pageLoadStrategy = "eager";
-
-        Configuration.remote = "https://user1:1234@" + System.getProperty("remoteHost") + "wd/hub";
+        Configuration.remote = "https://user1:1234@" + System.getProperty("remoteHost") + "/wd/hub";
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
 
