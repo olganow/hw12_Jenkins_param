@@ -42,12 +42,12 @@ public class TestBase {
     @AfterEach
     void addAttachments() {
         Configuration.browser = System.getProperty("browser");
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
 
         if (!Configuration.browser.equals("firefox")) {
             Attach.screenshotAs("Last screenshot");
             Attach.pageSource();
+            Attach.browserConsoleLogs();
+            Attach.addVideo();
         }
 
         Selenide.closeWebDriver();
